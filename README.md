@@ -172,7 +172,7 @@ Let's start the application by running `lein run` in the terminal. Once it start
 We can now test that adding a new message produces the notification:
 
 ```
-(add-message! {:event "hello world"})
+(event! {:event "hello world"})
 ```
 
 One the function runs, we should see something like the following printed in the terminal as the message is added to the database:
