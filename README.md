@@ -153,7 +153,7 @@ Next, we'll add functions that will allow us to add and remove listeners for a g
   (.removeNotificationListener conn listener))
 ```
 
-Let's start the application by running `lein run` in the terminal. Once it starts, the nREPL will become available at `localhost:7000` (in another cmd run `LEIN_REPL_PORT=7000 lein repl :connect`. When the REPL is connected, run the following code in it to start the database connection and register a listener:
+Let's start the application by running `lein run` in the terminal. Once it starts, the nREPL will become available at `localhost:7000` (run `lein repl :connect 7000` in another terminal to connect). When the REPL is connected, run the following code in it to start the database connection and register a listener:
 
 ```clojure
 (require :reload 'pg-feed-demo.db.core)
@@ -332,4 +332,4 @@ Finally, we'll update the `pg-feed-demo.core` namespace to list incoming events 
   (mount-components))
 ```
 
-That's all there is to it. We should now be able to send events to the server and see the notifications in the browser (Open http://localhost:3000). We should also be able to generate events by running queries directly in the database, or in another instance of the application.
+That's all there is to it. We should now be able to send events to the server and see the notifications in the browser (open http://localhost:3000). We should also be able to generate events by running queries directly in the database, or in another instance of the application.
